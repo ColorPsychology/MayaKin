@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NyamColors {
+class KinColors {
   static const customLightGreen = Color(0xFF5EDCC3);
   static const customLightGrey = Color(0xFFCBD0D9);
   static const customTurquise = Color(0xFF00CFD2);
