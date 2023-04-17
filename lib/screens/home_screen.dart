@@ -44,6 +44,121 @@ class HomeScreen extends StatelessWidget {
                 top: 20,
               ),
               child: AddButton(),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(
+                top: 12,
+              ),
+              child: MayaKinListItem(),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(
+                top: 12,
+              ),
+              child: MayaKinListItem(),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(
+                top: 12,
+              ),
+              child: MayaKinListItem(),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(
+                top: 12,
+              ),
+              child: MayaKinListItem(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MayaKinListItem extends StatelessWidget {
+  const MayaKinListItem({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: KinColors.customborderGrey,
+        ),
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 10,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.bookmark_border),
+                  color: KinColors.customTurquise,
+                  iconSize: 24,
+                ),
+                const Text(
+                  "홍길동",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: KinColors.textBlack70,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              width: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: KinColors.backgroundGrey,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 4,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      "217",
+                      style: TextStyle(
+                        color: KinColors.textBlack80,
+                        fontSize: 17,
+                      ),
+                    ),
+                    Text(
+                      "13",
+                      style: TextStyle(
+                        color: KinColors.textBlack80,
+                        fontSize: 17,
+                      ),
+                    ),
+                    Icon(
+                      Icons.square_rounded,
+                      color: Colors.red,
+                      size: 29,
+                    ),
+                    Icon(
+                      Icons.square_rounded,
+                      color: Colors.blue,
+                      size: 29,
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),
