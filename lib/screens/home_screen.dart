@@ -37,53 +37,64 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(
+          const Padding(
+            padding: EdgeInsets.only(
               top: 20,
               left: 20,
               right: 20,
             ),
+            child: AddButton(),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class AddButton extends StatelessWidget {
+  const AddButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      decoration: BoxDecoration(
+        color: KinColors.backgroundGreen,
+        borderRadius: const BorderRadius.all(Radius.circular(14)),
+        border: Border.all(
+          width: 1,
+          color: KinColors.customborderGreen,
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              right: 8,
+            ),
             child: Container(
-              height: 100,
+              width: 34,
+              height: 34,
               decoration: BoxDecoration(
-                color: KinColors.backgroundGreen,
-                borderRadius: const BorderRadius.all(Radius.circular(14)),
-                border: Border.all(
-                  width: 1,
-                  color: KinColors.customborderGreen,
-                ),
+                color: KinColors.customTurquise,
+                borderRadius: BorderRadius.circular(17),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      right: 8,
-                    ),
-                    child: Container(
-                      width: 34,
-                      height: 34,
-                      decoration: BoxDecoration(
-                        color: KinColors.customTurquise,
-                        borderRadius: BorderRadius.circular(17),
-                      ),
-                      child: const Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  const Text(
-                    "추가하기",
-                    style: TextStyle(
-                      color: KinColors.textBlack70,
-                      fontSize: 15,
-                    ),
-                  ),
-                ],
+              child: const Icon(
+                Icons.add,
+                color: Colors.white,
               ),
             ),
-          )
+          ),
+          const Text(
+            "추가하기",
+            style: TextStyle(
+              color: KinColors.textBlack70,
+              fontSize: 15,
+            ),
+          ),
         ],
       ),
     );
